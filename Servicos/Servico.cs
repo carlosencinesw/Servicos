@@ -98,6 +98,9 @@ namespace Servicos
 
             // Fecha o arquivo.
             file.Close();
+
+            // Exibe uma mensagem de confirmação para o usuario.
+            MessageBox.Show("Serviço gravado com sucesso.", "Salvar", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

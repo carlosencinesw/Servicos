@@ -20,8 +20,7 @@ namespace Servicos
         }
 
         private void btn_new_Click(object sender, EventArgs e)
-        {
-            
+        {            
             service.NewService(this);
         }
 
