@@ -83,14 +83,18 @@ namespace Servicos
 
         public void SaveService(TextBox name, TextBox address, TextBox phone, TextBox service)
         {
+            Name = name.Text;
+            Address = address.Text;
+            Phone = phone.Text;
+            Service = service.Text;
             // Gera um novo arquivo baseado no nome do cliuente.
             TextWriter file = new StreamWriter("Serviço - " + address.Text + " - " + name.Text + ".txt");
 
             // Escreve os dados no arquivo.
-            file.WriteLine("Cliente: " + name.Text);
-            file.WriteLine("Endereço: " + address.Text);
-            file.WriteLine("Telefone: " + phone.Text);
-            file.WriteLine("Serviço: " + service.Text);
+            file.WriteLine("Cliente: " + Name);
+            file.WriteLine("Endereço: " + Address);
+            file.WriteLine("Telefone: " + Phone);
+            file.WriteLine("Serviço: " + Service);
 
             // Fecha o arquivo.
             file.Close();
